@@ -31,7 +31,8 @@ var largePalin = function() {
 			}
 		}
 	}
-	return palinArr;
+	console.log( "The two 3-digit numbers resulting in the largest palindrome are " + palinArr );
+	console.log( "The palindrome is " + (palinArr[0]*palinArr[1]) );
 }
 
 largePalin();
