@@ -21,3 +21,4 @@ var powerOfFour = function(num) {
 
 console.log(powerOfFour(20));
 console.log(powerOfFour(41));
+console.log(powerOfFour(400));
