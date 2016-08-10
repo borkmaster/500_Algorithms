@@ -18,7 +18,9 @@ var evenFibonacci = function() {
 	}
 	fiboArr.pop();
 	for ( var i = 0; i < fiboArr.length; i++ ) {
-	    fiboSum += fiboArr[i];
+		if ( fiboArr[i] % 2 === 0 ) {
+			fiboSum += fiboArr[i];
+		}
 	}
 	return fiboSum;
 }

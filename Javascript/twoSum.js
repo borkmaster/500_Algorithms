@@ -14,8 +14,8 @@ var twoSum = function(arr, target) {
     for ( var i = 0; i < arr.length; i++ ) {
         for ( var a = i+1; a < arr.length; a++ ) {
             if ( arr[i] + arr[a] === target ) {
-                targetIndices.push(arr[i]);
-                targetIndices.push(arr[a]);
+                targetIndices.push(i);
+                targetIndices.push(a);
             }
         }
     }
