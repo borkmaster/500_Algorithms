@@ -1,4 +1,4 @@
-# Challenge: 1
+# Challenge: 3
 # Source: leetcode
 # Difficulty: Easy
 
@@ -8,12 +8,12 @@
 # Example:
 # Given num = 16, return true. Given num = 5, return false.
 
+import math
 def power_of_four(num):
-	if num % 4 == 0:
-		return True
-	else:
-		return False
-
+    return True if math.log(num, 4) % 1 == 0 else False
+    
+    
+print power_of_four(64)
 print power_of_four(8)
-print power_of_four(25)
-print power_of_four(40)
+print power_of_four(256)
+print power_of_four(1000)

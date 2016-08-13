@@ -26,4 +26,3 @@ powerOfFour(64);
 powerOfFour(72);
 powerOfFour(1028);
 powerOfFour(1048576);
-
