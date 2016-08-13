@@ -28,3 +28,9 @@ var twoSum = function(arr, target) {
 }
  
 twoSum([2, 7, 11, 15], 9);
+
+/*
+    Double for loop solution.
+    Starts the first loop at the first index, starts the second loop one index past the first.
+    Loops to the end for both loops, appends indices for any combos that equal the target number.
+*/
