@@ -11,7 +11,15 @@
 */
 
 var powerOfFour = function(num) {
-	if ( num % 4 === 0 ) {
+	var possNums = [];
+	var power = 0;
+	maxNum = num.toString().replace(/./g, 9);
+	do {
+		possNums.push(4 * Math.pow(4, power));
+		power++;
+	} while ( possNums[possNums.length-1] <= maxNum )
+	possNums.pop();
+	if ( possNums.indexOf(num) >= 0 ) {
 		return true;
 	}
 	else {
@@ -19,6 +27,6 @@ var powerOfFour = function(num) {
 	}
 }
 
-console.log(powerOfFour(20));
-console.log(powerOfFour(41));
-console.log(powerOfFour(400));
+console.log(powerOfFour(16));
+console.log(powerOfFour(325));
+console.log(powerOfFour(4));
