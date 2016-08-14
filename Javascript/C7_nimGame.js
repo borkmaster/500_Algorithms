@@ -10,11 +10,16 @@
 	For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.
 */
 
-var nimGame = function(num) {
-	if ( num - 1 > 3 ) {
-		return true;
-	}
-	else {
+//Assume the check is being made just before "your" turn
+var nimGame = function(min, max, num) {
+	if ( num % (min + max) === 0 ) {
 		return false;
 	}
+	else {
+		return true;
+	}
 }
+
+console.log(nimGame(1, 3, 16));
+console.log(nimGame(1, 3, 9));
+console.log(nimGame(1, 3, 236));
