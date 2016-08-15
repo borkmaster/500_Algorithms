@@ -11,13 +11,10 @@
 def even_fibonacci():
 	fiboArr = [1, 2]
 	fiboSum = 0
-	while fiboArr[len(fiboArr)-1] <= 4000000:
+	while fiboArr[len(fiboArr)-1] + fiboArr[len(fiboArr)-2] <= 4000000:
 		fiboArr.append(fiboArr[len(fiboArr)-1] + fiboArr[len(fiboArr)-2])
-	for n in fiboArr:
-		if n % 2 == 0:
-			fiboSum += n
+		if fiboArr[len(fiboArr)-1] % 2 == 0:
+			fiboSum += fiboArr[len(fiboArr)-1]
 	return fiboSum
-
-	
 
 print even_fibonacci()
